@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Visual Admin Dashboard - Home</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+    <style>
+      input[type="text"], textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      textarea {
+        height: 150px;
+        resize: none;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        padding: 10px;
+      }
+      input[type="submit"], input[type="reset"] {
+        width: auto;
+        padding: 10px 20px;
+        margin-top: 10px;
+      }
+      .templatemo-top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .other-logo {
+        width: 150px;
+        height: auto;
+      }
+      .other-logo2 {
+        width: 100px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>  
+    <form action="http://localhost/usuarios/registro.php" name="" method="POST">
+      <div class="templatemo-flex-row">
+        <div class="templatemo-sidebar">
+          <header class="templatemo-site-header"></header>
+          <div class="profile-photo-container">
+            <img src="images/logo.png" alt="Profile Photo" class="img-responsive">  
+          </div>      
+          <nav class="templatemo-left-nav">          
+            <ul>
+              <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+              <li><a href="manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+              <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+            </ul>  
+          </nav>
+        </div>
+
+        <div class="templatemo-content col-1 light-gray-bg">
+          <div class="templatemo-top-nav-container">
+            <div class="row">
+              <nav class="templatemo-top-nav col-lg-12 col-md-12">
+                <img src="images/logoipn.png" alt="IPN Logo" class="other-logo2">
+                <h3 style="font-size: 30px; color: rgb(111, 18, 60); font-family: Arial, sans-serif;">
+                  CURSO DE ALGORITMIA EN LINEA.
+                 </h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdQv9Nq5DpNQoOHB3btRRxHbtqR27ToPjcMQ&s" alt="Other Logo" class="other-logo">
+              </nav> 
+            </div>
+          </div>
+          <div class="templatemo-content-container">
+            <div class="templatemo-flex-row flex-content-row">
+              <div class="templatemo-content-widget white-bg col-2">
+                <h2 class="templatemo-inline-block">Contactanos</h2><hr>
+                <p>Gracias por visitar nuestra página, si encuentras un error o necesitas ayuda, escríbelo a continuación:</p>
+                <br>
+                <table border="0">
+                  <tr>
+                    <td>Nombre y Apellido:</td>
+                    <td><input type="text" name="nombre" id="name" required /></td>
+                  </tr>
+                  <tr>
+                    <td>Nombre de Usuario:</td>
+                    <td><input type="text" name="usuario" id="user" required /></td>
+                  </tr>
+                  <tr>
+                    <td>Comentario:</td>
+                    <td><textarea name="Comentario" id="Comentario" required></textarea></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center;">
+                      <input type="submit" name="enviar" id="enviar" value="Enviar" />
+                      <input type="reset" name="borrar" id="borrar" value="Restablecer" />
+                    </td>
+                  </tr>
+                </table>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

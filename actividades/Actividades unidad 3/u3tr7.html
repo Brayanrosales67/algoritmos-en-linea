@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Formulario Unidad 3/title</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+      function comprobarrespuestas() {
+        let respuestascorrectas = 0;
+
+        const correctas = {
+          p1: 'b', 
+          p2: 'b', 
+          p3: 'b', 
+        };
+
+        const p1 = document.querySelector('input[name="p1"]:checked');
+        const p2 = document.querySelector('input[name="p2"]:checked');
+        const p3 = document.querySelector('input[name="p3"]:checked');
+
+        if (p1 && p1.value === correctas.p1) {
+          respuestascorrectas++;
+        }
+        if (p2 && p2.value === correctas.p2) {
+          respuestascorrectas++;
+        }
+        if (p3 && p3.value === correctas.p3) {
+          respuestascorrectas++;
+        }
+
+        alert("Tienes " + respuestascorrectas + " respuestas correctas de 3");
+      }
+    </script>
+  </head>
+  <body>
+    <form name="Aspectos de un algoritmo" id="Aspectos de un algoritmo" method="post/get">
+      <div class="templatemo-flex-row">
+        <div class="templatemo-sidebar">
+          <header class="templatemo-site-header">
+            <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+          </header>
+          <nav class="templatemo-left-nav">          
+            <ul>
+              <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+              <li><a href="../../manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+              <li><a href="../../maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+            </ul>  
+          </nav>
+        </div>
+
+        <div class="templatemo-content col-1 light-gray-bg">
+          <div class="templatemo-top-nav-container">
+            <nav class="templatemo-top-nav col-lg-12 col-md-12">
+              <ul class="text-uppercase">
+                <li><a href="../../manage-users.html"><i class="fa fa-home fa-fw"></i>Regresar al Panel</a></li>
+              </ul>  
+            </nav> 
+          </div>
+  
+    
+          <div class="templatemo-content-container">
+            <div class="templatemo-flex-row flex-content-row">
+              <div class="templatemo-content-widget white-bg col-2">
+                <h2 class="templatemo-inline-block">Ejercicio Algoritmo de ordenamiento quicksort</h2><hr>
+
+                <!-- Pregunta 1 -->
+                <p>
+                  <label for="p1">1. ¿Cuál es el principio fundamental del algoritmo de Quicksort?</label><br/>
+                  <input type="radio" name="p1" value="a">a) Utiliza recursión para dividir el arreglo<br/>
+                  <input type="radio" name="p1" value="b">b) Ordena el arreglo con un solo paso<br/>
+                  <input type="radio" name="p1" value="c">c) Utiliza búsqueda binaria para ordenar<br/>
+                </p>
+
+                <!-- Pregunta 2 -->
+                <p>
+                  <label for="p2">2. ¿Qué hace la función de partición en el algoritmo de Quicksort?</label><br/>
+                  <input type="radio" name="p2" value="a">a) Divide el arreglo en subarreglos basados en un pivote<br/>
+                  <input type="radio" name="p2" value="b">b) Encuentra el valor mínimo en el arreglo<br/>
+                  <input type="radio" name="p2" value="c">c) Ordena el arreglo sin dividirlo<br/>
+                </p>
+
+                <!-- Pregunta 3 -->
+                <p>
+                  <label for="p3">3. ¿Qué significa cuando el índice de partición es igual al final del arreglo?</label><br/>
+                  <input type="radio" name="p3" value="a">a) Significa que el arreglo está completamente ordenado<br/>
+                  <input type="radio" name="p3" value="b">b) El pivote ha sido colocado correctamente en su posición<br/>
+                  <input type="radio" name="p3" value="c">c) El algoritmo ha fallado y no ha podido ordenar el arreglo<br/>
+                </p>
+
+                <br>
+                <input type="button" class="btn btn-primary" name="enviar" value="Comprobar respuestas" onclick="comprobarrespuestas()">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

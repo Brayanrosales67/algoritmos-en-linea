@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Formulario</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+      function comprobarrespuestas() {
+        let respuestascorrectas = 0;
+
+        const correctas = {
+          p1: 'a', 
+          p2: 'a', 
+          p3: 'b',
+ 
+        };
+
+        const p1 = document.querySelector('input[name="p1"]:checked');
+        const p2 = document.querySelector('input[name="p2"]:checked');
+        const p3 = document.querySelector('input[name="p3"]:checked');
+       
+
+        if (p1 && p1.value === correctas.p1) {
+          respuestascorrectas++;
+        }
+        if (p2 && p2.value === correctas.p2) {
+          respuestascorrectas++;
+        }
+        if (p3 && p3.value === correctas.p3) {
+          respuestascorrectas++;
+        }
+       
+
+        alert("Tienes " + respuestascorrectas + " respuestas correctas de 3");
+      }
+    </script> 
+
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="../../manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="../../maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="../../manage-users.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Ejericio Operadores Aritméticos</h2><hr>
+            <form action="#" method="post">
+
+               <!-- Pregunta 1 -->
+               <p>
+                <label for="p1">1.¿Qué operador aritmético en Java se utiliza para obtener el resto de una división? </label><br/>
+                <input type="radio" name="p1" value="a" /> a) % (módulo)<br/>
+                <input type="radio" name="p1" value="b" /> b) / (división)<br/> 
+                <input type="radio" name="p1" value="c" /> c) * (multiplicación)<br/>  
+              </p>
+
+              <!-- Pregunta 2 -->
+              <p>
+                <label for="p2">2. ¿Qué sucede cuando ambos operandos de una división son enteros en Java?</label><br/>
+                <input type="radio" name="p2" value="a" /> a) El resultado será un número entero, truncando cualquier valor decimal.<br/>
+                <input type="radio" name="p2" value="b" /> b) El resultado será un número decimal.<br/> 
+                <input type="radio" name="p2" value="c" /> c) La operación no se puede realizar con enteros.<br/>  
+              </p>
+
+              <!-- Pregunta 3 -->
+              <p>
+                <label for="p3">3. ¿Qué tipo de datos debe tener al menos uno de los operandos para obtener un resultado decimal en una división en Java?</label><br/>
+                <input type="radio" name="p3" value="a" /> a) Entero<br/>
+                <input type="radio" name="p3" value="b" /> b) Flotante (float) o doble (double)<br/> 
+                <input type="radio" name="p3" value="c" /> c) Booleano <br/>  
+              </p>
+
+             
+
+
+<!--Botones-->
+<br><br>
+<input type="button" class="btn btn-primary" name="enviar" value="Comprobar respuestas" onclick="comprobarrespuestas()">
+            </form>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

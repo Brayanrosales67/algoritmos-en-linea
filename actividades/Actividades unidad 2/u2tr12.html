@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario: Ciclo `do-while`</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+      const respuestasCorrectas = {
+        p1: "b",
+        p2: "c",
+        p3: "a",
+      };
+
+      function verificarRespuestas(event) {
+        event.preventDefault();
+        let aciertos = 0;
+
+        for (let pregunta in respuestasCorrectas) {
+          const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+          if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+            aciertos++;
+          }
+        }
+
+        alert(`¡Tuviste ${aciertos} aciertos!`);
+      }
+    </script>
+  </head>
+  <body>
+   
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="../../manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="../../maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+      
+          
+                <div class="templatemo-content-container">
+                  <div class="templatemo-flex-row flex-content-row">
+                    <div class="templatemo-content-widget white-bg col-2">
+                      <h2 class="templatemo-inline-block"></h2><hr>
+              
+
+    <h2>Formulario: Ciclo `do-while` en Java</h2>
+          <form onsubmit="verificarRespuestas(event)">
+            <!-- Pregunta 1 -->
+            <p>
+              <label for="p1">1. ¿Qué asegura el bucle `do-while`?</label><br/>
+              <input type="radio" name="p1" value="a" /> a) Que nunca se ejecute el bloque de código.<br/>
+              <input type="radio" name="p1" value="b" /> b) Que el bloque se ejecute al menos una vez.<br/>
+              <input type="radio" name="p1" value="c" /> c) Que se evalúe la condición antes del bloque.<br/>
+            </p>
+
+            <!-- Pregunta 2 -->
+            <p>
+              <label for="p2">2. ¿Qué sucede si la condición en `do-while` es siempre verdadera?</label><br/>
+              <input type="radio" name="p2" value="a" /> a) Se detiene automáticamente.<br/>
+              <input type="radio" name="p2" value="b" /> b) Lanza una excepción.<br/>
+              <input type="radio" name="p2" value="c" /> c) Entra en un ciclo infinito.<br/>
+            </p>
+
+            <!-- Pregunta 3 -->
+            <p>
+              <label for="p3">3. ¿Cuál es la diferencia principal entre `while` y `do-while`?</label><br/>
+              <input type="radio" name="p3" value="a" /> a) En `do-while`, el bloque se ejecuta antes de verificar la condición.<br/>
+              <input type="radio" name="p3" value="b" /> b) En `while`, el bloque siempre se ejecuta.<br/>
+              <input type="radio" name="p3" value="c" /> c) No hay diferencias entre ambos.<br/>
+            </p>
+
+
+            <br/>
+            <input type="submit" class="btn btn-primary" value="Enviar datos">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

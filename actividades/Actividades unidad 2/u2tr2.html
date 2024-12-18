@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+      const respuestasCorrectas = {
+        pregunta1: "b",
+        pregunta2: "c",
+        pregunta3: "b",
+        pregunta4: "a",
+        pregunta5: "a",
+      };
+
+      function verificarRespuestas(event) {
+        event.preventDefault();
+        let aciertos = 0;
+
+        for (let pregunta in respuestasCorrectas) {
+          const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+          if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+            aciertos++;
+          }
+        }
+
+        alert(`¡Tuviste ${aciertos} aciertos!`);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="../../manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="../../maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+  
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+
+
+    
+    <h2>Formulario sobre la estructura `if` en Java</h2>
+          <form onsubmit="verificarRespuestas(event)">
+            <div class="form-group">
+              <label for="pregunta1">¿Qué palabra clave se utiliza para evaluar una condición en Java?</label><br>
+              <input type="radio" name="pregunta1" value="a"> a) `check`<br>
+              <input type="radio" name="pregunta1" value="b"> b) `if`<br>
+              <input type="radio" name="pregunta1" value="c"> c) `condition`<br>
+            </div>
+
+            <div class="form-group">
+              <label for="pregunta2">¿Cómo evalúas múltiples condiciones si la primera es falsa?</label><br>
+              <input type="radio" name="pregunta2" value="a"> a) Usando `if (condición2)` directamente.<br>
+              <input type="radio" name="pregunta2" value="b"> b) Repitiendo la instrucción `if`.<br>
+              <input type="radio" name="pregunta2" value="c"> c) Usando `else if (condición2)`.<br>
+            </div>
+
+            <div class="form-group">
+              <label for="pregunta3">¿Qué ocurre si ninguna condición en un bloque `if-else` se cumple?</label><br>
+              <input type="radio" name="pregunta3" value="a"> a) No se ejecuta ningún bloque de código.<br>
+              <input type="radio" name="pregunta3" value="b"> b) Se ejecuta el bloque dentro de `else` (si existe).<br>
+              <input type="radio" name="pregunta3" value="c"> c) Java lanza un error.<br>
+            </div>
+
+            <div class="form-group">
+              <label for="pregunta4">¿Qué tipo de dato espera la condición en un bloque `if`?</label><br>
+              <input type="radio" name="pregunta4" value="a"> a) `boolean`.<br>
+              <input type="radio" name="pregunta4" value="b"> b) Cualquier tipo de dato.<br>
+              <input type="radio" name="pregunta4" value="c"> c) `int`.<br>
+            </div>
+
+            <div class="form-group">
+              <label for="pregunta5">¿Qué imprime el siguiente código si `int x = -1;`?<br>
+                <pre>
+if (x > 0) {
+  System.out.println("Positivo");
+} else {
+  System.out.println("Negativo o cero");
+}
+                </pre>
+              </label><br>
+              <input type="radio" name="pregunta5" value="a"> a) "Negativo o cero".<br>
+              <input type="radio" name="pregunta5" value="b"> b) "Positivo".<br>
+              <input type="radio" name="pregunta5" value="c"> c) No imprime nada.<br>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary" value="Enviar datos">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

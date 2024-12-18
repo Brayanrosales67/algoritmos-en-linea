@@ -1,0 +1,114 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">  
+      <title>Unidad 2</title>
+    
+      <link href="css/font-awesome.min.css" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/formulario.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+      <script>
+        const respuestasCorrectas = {
+          pregunta1: "b",
+          pregunta2: "b",
+          pregunta3: "b",
+          pregunta4: "b",
+          pregunta5: "a",
+        };
+
+        function verificarRespuestas(event) {
+          event.preventDefault();
+          let aciertos = 0;
+
+          for (let pregunta in respuestasCorrectas) {
+            const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+            if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+              aciertos++;
+            }
+          }
+
+          alert(`¡Tuviste ${aciertos} aciertos!`);
+        }
+      </script>
+    </head>
+    <body>
+      <div class="templatemo-flex-row">
+        <div class="templatemo-sidebar">
+          <header class="templatemo-site-header">
+            <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+          </header>
+          <nav class="templatemo-left-nav">          
+            <ul>
+              <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+              <li><a href="../../manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+              <li><a href="../../maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+            </ul>  
+          </nav>
+        </div>
+  
+        <div class="templatemo-content col-1 light-gray-bg">
+          <div class="templatemo-top-nav-container">
+            <nav class="templatemo-top-nav col-lg-12 col-md-12">
+              <ul class="text-uppercase">
+                <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Regresar al Panel</a></li>
+              </ul>  
+            </nav> 
+          </div>
+  
+          <div class="templatemo-content-container">
+            <div class="templatemo-flex-row flex-content-row">
+              <div class="templatemo-content-widget white-bg col-2">
+               
+
+            <h2>Formulario sobre el uso de `Scanner` en Java</h2>
+            <form onsubmit="verificarRespuestas(event)">
+              <div class="form-group">
+                <label for="pregunta1">¿Qué clase se utiliza en Java para recibir datos del usuario desde el teclado?</label><br>
+                <input type="radio" name="pregunta1" value="a"> a) `InputReader`<br>
+                <input type="radio" name="pregunta1" value="b"> b) `Scanner`<br>
+                <input type="radio" name="pregunta1" value="c"> c) `UserInput`<br>
+              </div>
+
+              <div class="form-group">
+                <label for="pregunta2">¿Qué método se utiliza para leer una línea de texto completa en Java con `Scanner`?</label><br>
+                <input type="radio" name="pregunta2" value="a"> a) `nextText()`<br>
+                <input type="radio" name="pregunta2" value="b"> b) `nextLine()`<br>
+                <input type="radio" name="pregunta2" value="c"> c) `readString()`<br>
+              </div>
+
+              <div class="form-group">
+                <label for="pregunta3">¿Cuál es la función del método `close()` en el objeto `Scanner`?</label><br>
+                <input type="radio" name="pregunta3" value="a"> a) Abre la entrada de datos.<br>
+                <input type="radio" name="pregunta3" value="b"> b) Cierra el objeto `Scanner` y libera los recursos.<br>
+                <input type="radio" name="pregunta3" value="c"> c) Reinicia la lectura de datos.<br>
+              </div>
+
+              <div class="form-group">
+                <label for="pregunta4">¿Qué debe hacerse antes de usar la clase `Scanner` en un programa?</label><br>
+                <input type="radio" name="pregunta4" value="a"> a) No es necesario hacer nada.<br>
+                <input type="radio" name="pregunta4" value="b"> b) Importar la clase `Scanner` con `import java.util.Scanner;`<br>
+                <input type="radio" name="pregunta4" value="c"> c) Crear un objeto de tipo `Scanner` sin importar la clase.<br>
+              </div>
+
+              <div class="form-group">
+                <label for="pregunta5">Si quieres leer un número entero en lugar de una cadena de texto, ¿qué método de `Scanner` usarías?</label><br>
+                <input type="radio" name="pregunta5" value="a"> a) `nextInt()`<br>
+                <input type="radio" name="pregunta5" value="b"> b) `nextLine()`<br>
+                <input type="radio" name="pregunta5" value="c"> c) `readInt()`<br>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Enviar datos">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </body>
+  </html>

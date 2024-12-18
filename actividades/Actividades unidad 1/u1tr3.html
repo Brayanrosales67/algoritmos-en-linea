@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Formulario</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+      function comprobarrespuestas() {
+        let respuestascorrectas = 0;
+
+        const correctas = {
+          p1: 'b', 
+          p2: 'b', 
+          p3: 'b',
+ 
+        };
+
+        const p1 = document.querySelector('input[name="p1"]:checked');
+        const p2 = document.querySelector('input[name="p2"]:checked');
+        const p3 = document.querySelector('input[name="p3"]:checked');
+       
+
+        if (p1 && p1.value === correctas.p1) {
+          respuestascorrectas++;
+        }
+        if (p2 && p2.value === correctas.p2) {
+          respuestascorrectas++;
+        }
+        if (p3 && p3.value === correctas.p3) {
+          respuestascorrectas++;
+        }
+       
+
+        alert("Tienes " + respuestascorrectas + " respuestas correctas de 3");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="../../manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="../../maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="../../manage-users.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Ejercicio Algoritmo cuantitativo</h2><hr>
+            <form action="#" method="post">
+
+         <div class="form-group">
+         <label for="p1">¿Qué tipo de datos procesan los algoritmos cuantitativos?</label><br>
+         <input type="radio" name="p1" value="a"> a) Descripciones cualitativas  <br>
+        <input type="radio" name="p1" value="b">b) Datos numéricos   <br>
+         <input type="radio" name="p1" value="c">c) Imágenes y sonidos<br>
+        </div>
+
+         <div class="form-group">
+         <label for="p2">¿Cuál es la principal diferencia entre un algoritmo cuantitativo y un algoritmo cualitativo?</label><br>
+         <input type="radio" name="p2" value="a">a) Los algoritmos cuantitativos se basan en categorías, mientras que los cualitativos en cálculos numéricos.<br>
+         <input type="radio" name="p2" value="b">b) Los algoritmos cuantitativos operan con datos numéricos, mientras que los cualitativos se enfocan en descripciones no numéricas.  <br>
+         <input type="radio" name="p2" value="c">c) Los algoritmos cuantitativos requieren programación en Python, mientras que los cualitativos no. <br>
+        </div>
+
+          <div class="form-group">
+          <label for="p3">¿Cuál de los siguientes ejemplos es un tipo común de algoritmo cuantitativo?</label><br>
+            <input type="radio" name="p3" value="a">a) Análisis de sentimientos   <br>
+         <input type="radio" name="p3" value="b">b) Cálculo de promedios   <br>
+         <input type="radio" name="p3" value="c">c) Clasificación de imágenes <br>
+         </div>
+
+                <div class="form-group">
+<br></br>                  
+                  <input type="button" class="btn btn-primary" name="enviar" value="Comprobar respuestas" onclick="comprobarrespuestas()">
+                </div>
+              </form>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario Unidad 2</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+      const respuestasCorrectas = {
+        p1: "b",
+        p2: "c",
+        p3: "a",
+      };
+
+      function verificarRespuestas(event) {
+        event.preventDefault();
+        let aciertos = 0;
+
+        for (let pregunta in respuestasCorrectas) {
+          const respuestaSeleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+          if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[pregunta]) {
+            aciertos++;
+          }
+        }
+
+        alert(`¡Tuviste ${aciertos} aciertos!`);
+      }
+    </script>
+  </head>
+  <body>
+    <body>
+      <div class="templatemo-flex-row">
+        <div class="templatemo-sidebar">
+          <header class="templatemo-site-header">
+            <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+          </header>
+          <nav class="templatemo-left-nav">          
+            <ul>
+              <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+              <li><a href="../../manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+              <li><a href="../../maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+            </ul>  
+          </nav>
+        </div>
+  
+        <div class="templatemo-content col-1 light-gray-bg">
+          <div class="templatemo-top-nav-container">
+            <nav class="templatemo-top-nav col-lg-12 col-md-12">
+              <ul class="text-uppercase">
+                <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Regresar al Panel</a></li>
+              </ul>  
+            </nav> 
+          </div>
+  
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+              <h2 class="templatemo-inline-block">Ejercicio Problema 1: Uso de `switch`</h2>
+              <hr>
+
+              <form onsubmit="verificarRespuestas(event)" id="Aspectos de un algoritmo">
+                <!-- Pregunta 1 -->
+                <p>
+                  <label for="p1">1. ¿Cuál es la función principal de `switch` en Java?</label><br/>
+                  <input type="radio" name="p1" value="a" /> a) Repetir un bloque de código<br/>
+                  <input type="radio" name="p1" value="b" /> b) Seleccionar un bloque de código basado en el valor de una variable<br/>
+                  <input type="radio" name="p1" value="c" /> c) Comparar dos valores booleanos<br/>
+                </p>
+
+                <!-- Pregunta 2 -->
+                <p>
+                  <label for="p2">2. ¿Qué ocurre si no se incluye un `break` en un caso?</label><br/>
+                  <input type="radio" name="p2" value="a" /> a) El programa lanza un error<br/>
+                  <input type="radio" name="p2" value="b" /> b) Salta al bloque `default`<br/>
+                  <input type="radio" name="p2" value="c" /> c) Continúa ejecutando los siguientes casos<br/>
+                </p>
+
+                <!-- Pregunta 3 -->
+                <p>
+                  <label for="p3">3. ¿Qué bloque de código se ejecuta si ningún caso coincide?</label><br/>
+                  <input type="radio" name="p3" value="a" /> a) El bloque `default`<br/>
+                  <input type="radio" name="p3" value="b" /> b) El primer caso<br/>
+                  <input type="radio" name="p3" value="c" /> c) Ninguno<br/>
+                </p>
+
+               
+
+                <br/>
+                <input type="submit" class="btn btn-primary" name="enviar" value="Enviar datos">
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

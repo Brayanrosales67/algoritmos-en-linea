@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Unidad 1 - Aspectos de un Algoritmo</title>
+  
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+      function comprobarrespuestas() {
+        let respuestascorrectas = 0;
+
+        const correctas = {
+          p1: 'c', 
+          p2: 'b', 
+          p3: 'c',
+ 
+        };
+
+        const p1 = document.querySelector('input[name="p1"]:checked');
+        const p2 = document.querySelector('input[name="p2"]:checked');
+        const p3 = document.querySelector('input[name="p3"]:checked');
+       
+
+        if (p1 && p1.value === correctas.p1) {
+          respuestascorrectas++;
+        }
+        if (p2 && p2.value === correctas.p2) {
+          respuestascorrectas++;
+        }
+        if (p3 && p3.value === correctas.p3) {
+          respuestascorrectas++;
+        }
+       
+
+        alert("Tienes " + respuestascorrectas + " respuestas correctas de 3");
+      }
+    </script> 
+
+  
+  
+  </head>
+<form name="Aspectos de un algoritmo" id="Aspectos de un algoritmo" method="post/get" >
+
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="../../index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="../../manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="../../maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="../../manage-users.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Ejercicio Algoritmos secuenciales con diferentes tipos de datos</h2><hr>
+            <!--Usuarios-->
+
+            <!-- Pregunta 1 -->
+<p>
+  <label for="p1">1.¿Cuál es la ventaja de usar diferentes tipos de datos en un algoritmo en Java?</label><br/>
+  <input type="radio" name="p1" value="a" /> a) Limita las operaciones a solo números enteros.<br/>
+  <input type="radio" name="p1" value="b" /> b) Hace que el programa sea más lento.<br/> 
+  <input type="radio" name="p1" value="c" /> c) Permite realizar cálculos más precisos y manipular distintos tipos de información.<br/>  
+</p>
+
+<!-- Pregunta 2 -->
+<p>
+  <label for="p2">2. ¿Qué tipo de datos en Java se utilizaría para almacenar una cadena de texto?</label><br/>
+  <input type="radio" name="p2" value="a" /> a) float<br/>
+  <input type="radio" name="p2" value="b" /> b) String<br/> 
+  <input type="radio" name="p2" value="c" /> c) int<br/>  
+</p>
+
+<!-- Pregunta 3 -->
+<p>
+  <label for="p3">3. ¿Por qué es importante realizar conversiones entre tipos de datos en un algoritmo?</label><br/>
+  <input type="radio" name="p3" value="a" /> a) Para aumentar la velocidad de ejecución del programa.<br/>
+  <input type="radio" name="p3" value="b" /> b) Para hacer que el código sea más legible.<br/> 
+  <input type="radio" name="p3" value="c" /> c) Para evitar pérdidas de precisión en operaciones matemáticas, como convertir de int a double.<br/>  
+</p>
+
+
+
+<!--Botones-->
+<br><br>
+<input type="button" class="btn btn-primary" name="enviar" value="Comprobar respuestas" onclick="comprobarrespuestas()">
+
+
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+  
+</html>
