@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Unidad 1 - Aspectos de un Algoritmo</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="index.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Algoritmo de Busqueda Binaria</h2><hr></h2>
+            <p>
+                Descripción: <br>
+                La búsqueda binaria requiere un arreglo ordenado y divide el rango de búsqueda a la mitad en cada paso, reduciendo el tiempo de búsqueda en comparación con la búsqueda secuencial.
+                <br> <br>
+                Ejemplo: <br>  <br>
+                import java.util.Arrays;  <br>
+                <br>
+                public class BusquedaBinaria { <br>
+                    public static void main(String[] args) { <br>
+                        int[] numeros = {1, 3, 7, 9, 14}; <br>
+                        int buscado = 7; <br>
+                        <br>
+                        Arrays.sort(numeros);  // Asegurarse de que el arreglo esté ordenado <br>
+                        int posicion = Arrays.binarySearch(numeros, buscado); <br>
+                        <br>
+                        if (posicion >= 0) { <br>
+                            System.out.println("Número encontrado en la posición: " + posicion); <br>
+                        } else { <br>
+                            System.out.println("Número no encontrado en el arreglo."); <br>
+                        } <br>
+                    } <br>
+                } <br>
+
+                
+                </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

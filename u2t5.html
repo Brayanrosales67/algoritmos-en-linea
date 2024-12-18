@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Unidad 1 - Aspectos de un Algoritmo</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="index.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Estructuras Selectivas switch</h2><hr></h2>
+            <p>
+                Descripción: <br>
+                La estructura switch en Java es una herramienta fundamental que permite controlar el flujo de un programa basándose en el valor de una sola variable o expresión. A diferencia de las estructuras if-else, que evalúan condiciones booleanas, switch compara el valor de una variable con múltiples opciones posibles, conocidas como "casos". Esta estructura resulta especialmente útil cuando se trabaja con múltiples escenarios para un solo valor, como menús de opciones o valores categóricos.<br>
+
+Sintaxis básica de switch<br>
+switch (expresión) { <br>
+    case valor1:<br>
+        // Código a ejecutar si expresión == valor1<br>
+        break; // Termina el caso<br>
+    case valor2:<br>
+        // Código a ejecutar si expresión == valor2<br>
+        break;<br>
+    // Puedes añadir tantos casos como necesites<br>
+    default:<br>
+        // Código a ejecutar si ningún caso coincide<br>
+}<br>
+Expresión: La variable o expresión a evaluar debe ser de un tipo permitido, como:<br>
+
+int, short, byte, char<br>
+String <br>
+Enums<br>
+Casos (case): Cada caso evalúa un posible valor de la expresión. Si coincide, se ejecuta el bloque de código asociado.<br>
+
+break: Se utiliza para evitar que la ejecución continúe en los casos siguientes. Si se omite, se produce un fenómeno conocido como fallthrough.<br>
+
+default: Este bloque es opcional, pero se ejecuta si ninguno de los casos coincide.<br>
+                Ejemplo: <br>
+                iimport java.util.Scanner; <br>
+<br>
+                public class EstructuraSwitch { <br>
+                    public static void main(String[] args) { <br>
+                        Scanner scanner = new Scanner(System.in); <br>
+                        System.out.print("Ingrese un día de la semana (1-7): "); <br>
+                        int dia = scanner.nextInt(); <br>
+                <br>
+                        switch (dia) { <br>
+                            case 1: System.out.println("Lunes"); break; <br>
+                            case 2: System.out.println("Martes"); break; <br>
+                            case 3: System.out.println("Miércoles"); break; <br>
+                            case 4: System.out.println("Jueves"); break; <br>
+                            case 5: System.out.println("Viernes"); break; <br>
+                            case 6: System.out.println("Sábado"); break; <br>
+                            case 7: System.out.println("Domingo"); break; <br>
+                            default: System.out.println("Día inválido."); <br>
+                        } <br>
+                        scanner.close(); <br>
+                    } <br>
+                } <br>
+                
+                </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

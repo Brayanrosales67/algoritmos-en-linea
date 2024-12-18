@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Unidad 1 - Aspectos de un Algoritmo</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="index.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Numero Aleatorio Metodo Random</h2><hr></h2>
+            <p>
+                Descripción: <br>
+                Para generar números aleatorios en Java, usamos el método Math.random(), que devuelve un número decimal entre 0.0 y 1.0 (excluyendo el 1.0). Este método es útil cuando necesitamos generar valores aleatorios dentro de un rango específico.</br> 
+                Al multiplicar el resultado de Math.random() por un valor determinado y luego redondearlo o ajustarlo, podemos obtener números en el rango deseado.
+                <br> 
+                Ejemplo: <br>
+                public class EjemploNumeroAleatorio { <br>
+                    public static void main(String[] args) { <br>
+                        int min = 1; <br>
+                        int max = 10; <br>
+                        int numeroAleatorio = (int)(Math.random() * (max - min + 1) + min); <br>
+                        System.out.println("Número aleatorio entre 1 y 10: " + numeroAleatorio); <br>
+                    } <br>
+                } <br>
+                
+                
+                
+                Este código imprimirá un número aleatorio entre 1 y 10, como: <br>
+                Número aleatorio entre 1 y 10: 7
+                </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

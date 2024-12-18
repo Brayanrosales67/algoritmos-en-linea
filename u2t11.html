@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Unidad 1 - Aspectos de un Algoritmo</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="index.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Problema 6 secuencial con estructura selectiva</h2><hr></h2>
+                Descripción: <br>
+                Determinar si un número ingresado por el usuario es primo.
+                <br> 
+                Ejemplo: <br>
+                import java.util.Scanner; <br>
+                <br>
+public class NumeroPrimo {<br>
+    public static void main(String[] args) {<br>
+        Scanner scanner = new Scanner(System.in);<br>
+        System.out.print("Ingrese un número: ");<br>
+        int numero = scanner.nextInt();<br>
+        boolean esPrimo = true;<br>
+        <br>
+        if (numero <= 1) {<br>
+            esPrimo = false;<br>
+        } else {<br>
+            int i = 2;<br>
+            while (i <= Math.sqrt(numero)) {<br>
+                if (numero % i == 0) {<br>
+                    esPrimo = false;<br>
+                    break;<br>
+                }<br>
+                i++;<br>
+            }<br>
+        }<br>
+        <br>
+        if (esPrimo) {<br>
+            System.out.println("El número " + numero + " es primo.");<br>
+        } else {<br>
+            System.out.println("El número " + numero + " no es primo.");<br>
+        }<br>
+        scanner.close();<br>
+    }<br>
+}<br>
+       
+                
+                </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Unidad 1 - Aspectos de un Algoritmo</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="index.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Algoritmo de Busqueda Secuencial</h2><hr></h2>
+            <p>
+                Descripción: <br>
+                La búsqueda secuencial revisa cada elemento de un arreglo uno por uno hasta encontrar el valor buscado o hasta llegar al final del arreglo.
+                <br> <br>
+                Ejemplo: <br>
+                public class BusquedaSecuencial { <br>
+                    public static void main(String[] args) {<br>
+                        int[] numeros = {3, 7, 1, 14, 9};<br>
+                        int buscado = 14;<br>
+                        boolean encontrado = false;<br>
+                        <br>
+                        for (int i = 0; i < numeros.length; i++) {<br>
+                            if (numeros[i] == buscado) {<br>
+                                System.out.println("Número encontrado en la posición: " + i);<br>
+                                encontrado = true;<br>
+                                break;<br>
+                            }<br>
+                        }<br>
+                        <br>
+                        if (!encontrado) {<br>
+                            System.out.println("Número no encontrado en el arreglo.");<br>
+                        }<br>
+                    }<br>
+                }<br>
+                
+                
+                </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

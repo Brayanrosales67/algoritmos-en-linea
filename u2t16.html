@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Unidad 1 - Aspectos de un Algoritmo</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="index.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+        <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Problema General 3: Tabla de Multiplicar con Opciones</h2><hr></h2>
+            <p>
+                Descripción: <br>
+                Este programa permite al usuario ingresar un número y una opción para mostrar la tabla de multiplicar del 1 al 10 usando un bucle for, while o do-while. <br>
+                                El usuario elige la estructura repetitiva a usar.
+                <br> <br>
+                Ejemplo: <br>
+                import java.util.Scanner;<br>
+                <br>
+                public class TablaMultiplicar {<br>
+                    public static void main(String[] args) {<br>
+                        Scanner scanner = new Scanner(System.in);<br>
+                        <br>
+                        System.out.print("Ingrese un número para ver su tabla de multiplicar: ");<br>
+                        int numero = scanner.nextInt();<br>
+                        <br>
+                        System.out.println("Seleccione la estructura de repetición:");<br>
+                        System.out.println("1. for");<br>
+                        System.out.println("2. while");<br>
+                        System.out.println("3. do-while");<br>
+                        int opcion = scanner.nextInt();<br>
+                        <br>
+                        switch (opcion) {<br>
+                            case 1:<br>
+                                System.out.println("Tabla de multiplicar con for:");<br>
+                                for (int i = 1; i <= 10; i++) {<br>
+                                    System.out.println(numero + " x " + i + " = " + (numero * i));<br>
+                                }<br>
+                                break;<br>
+                                <br>
+                            case 2:<br>
+                                System.out.println("Tabla de multiplicar con while:");<br>
+                                int j = 1;<br>
+                                while (j <= 10) {<br>
+                                    System.out.println(numero + " x " + j + " = " + (numero * j));<br>
+                                    j++;<br>
+                                }<br>
+                                break;<br>
+                                <br>
+                            case 3:<br>
+                                System.out.println("Tabla de multiplicar con do-while:");<br>
+                                int k = 1;<br>
+                                do {<br>
+                                    System.out.println(numero + " x " + k + " = " + (numero * k));<br>
+                                    k++;<br>
+                                } while (k <= 10);<br>
+                                break;<br>
+                                <br>
+                            default:<br>
+                                System.out.println("Opción no válida.");<br>
+                        }<br>
+                        scanner.close();<br>
+                    }<br>
+                }<br>
+                
+                
+                </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Unidad 1 - Aspectos de un Algoritmo</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <img src="images/logo.png" alt="Profile Photo" class="img-responsive" width="250" height="160">  
+        </header>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+            <li><a href="manage-users.html"><i class="fa fa-database fa-fw"></i>Contenidos de apoyo</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>Contactanos</a></li>
+          </ul>  
+        </nav>
+      </div>
+
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <nav class="templatemo-top-nav col-lg-12 col-md-12">
+            <ul class="text-uppercase">
+              <li><a href="index.html">Regresar al Panel</a></li>
+            </ul>  
+          </nav> 
+        </div>
+
+             <div class="templatemo-content-container">
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+            <h2 class="templatemo-inline-block">Algoritmo de Ordenamiento Quicksort</h2><hr></h2>
+        
+            <p>
+                Descripción: <br>
+                El quicksort es un algoritmo eficiente que usa recursión para dividir el arreglo en subarreglos y ordenar cada uno de manera independiente.
+                <br> <br>
+                Ejemplo: <br>  <br>
+                public class OrdenamientoQuicksort {<br>
+                    public static void quicksort(int[] arreglo, int inicio, int fin) {<br>
+                        if (inicio < fin) {<br>
+                            int indiceParticion = particion(arreglo, inicio, fin);<br>
+                            quicksort(arreglo, inicio, indiceParticion - 1);<br>
+                            quicksort(arreglo, indiceParticion + 1, fin);<br>
+                        }<br>
+                    }<br>
+                    <br>
+                    private static int particion(int[] arreglo, int inicio, int fin) {<br>
+                        int pivote = arreglo[fin];<br>
+                        int i = inicio - 1;<br>
+                        <br>
+                        for (int j = inicio; j < fin; j++) {<br>
+                            if (arreglo[j] <= pivote) {<br>
+                                i++;<br>
+                                int temp = arreglo[i];<br>
+                                arreglo[i] = arreglo[j];<br>
+                                arreglo[j] = temp;<br>
+                            }<br>
+                        }<br>
+                        <br>
+                        int temp = arreglo[i + 1];<br>
+                        arreglo[i + 1] = arreglo[fin];<br>
+                        arreglo[fin] = temp;<br>
+                        <br>
+                        return i + 1;<br>
+                    }<br>
+                    <br>
+                    public static void main(String[] args) {<br>
+                        int[] numeros = {5, 3, 8, 1, 2};<br>
+                        quicksort(numeros, 0, numeros.length - 1);<br>
+                        <br>
+                        System.out.print("Arreglo ordenado: ");<br>
+                        for (int numero : numeros) {<br>
+                            System.out.print(numero + " ");<br>
+                        }<br>
+                    }<br>
+                }<br>
+                
+                </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
